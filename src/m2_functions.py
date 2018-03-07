@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Raymond Becerra.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -32,6 +32,8 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle4()
+    turtle5()
     turtle3()
     turtle2()
     turtle2()
@@ -70,8 +72,7 @@ def turtle2():
     # Keep track of where I am, to go back to it at the end.
     # Then choose a RANDOM starting point for the motion in here.
     i_began_here = rg.Point(grace.x_cor(), grace.y_cor())
-    i_am_going_here = rg.Point(random.randrange(-500, 500),
-                               random.randrange(-300, 0))
+    i_am_going_here = rg.Point(random.randrange(-500, 500), random.randrange(-300, 0))
     grace.pen_up()
     grace.go_to(i_am_going_here)
     grace.pen_down()
@@ -103,10 +104,50 @@ def turtle3():
     maja.draw_circle(50)
     maja.end_fill()
 
+def turtle4():
 
+    joe = rg.SimpleTurtle('turtle')
+    joe.speed = 8
+    joe.pen = rg.Pen('green',8)
+    joe.paint_bucket = rg.PaintBucket('blue')
+
+    joe.backward(300)
+    joe.right(90)
+    joe.forward(100)
+
+    joe.begin_fill()
+    joe.draw_circle(80)
+    joe.end_fill()
+
+def turtle5():
+
+    ben = rg.SimpleTurtle()
+    ben.speed = 15
+    ben.pen = rg.Pen('gray',10)
+    ben.paint_bucket = rg.PaintBucket('brown')
+
+    ben.right(90)
+    ben.forward(110)
+
+    ben.begin_fill()
+    ben.draw_square(10)
+    ben.end_fill()
+
+    bill = rg.SimpleTurtle()
+    bill.speed = 10
+    bill.pen = rg.Pen('red', 10)
+    bill.paint_bucket = rg.PaintBucket('pink')
+
+    bill.backward(50)
+    bill.right(90)
+    bill.forward(110)
+
+    bill.begin_fill()
+    bill.draw_circle(4)
+    bill.end_fill()
 ###############################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -138,7 +179,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -168,7 +209,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
@@ -184,7 +225,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 6.
+# DONE: 6.
 #   The previous two TODOs IMPLEMENTED a function (TO-DO 4)
 #   and TESTED that function (TO-DO 5).
 #
@@ -211,7 +252,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 7.
+# DONE: 7.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
