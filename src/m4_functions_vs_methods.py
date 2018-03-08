@@ -4,8 +4,8 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Raymond Becerra.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
@@ -82,6 +82,13 @@ def main():
     draw_many_squares(turtle, 3, 75, 15)
 
     turtle3()
+
+    try_methods()
+
+    try_functions(200, 100, 300, 30, 100, 200, 0, 0, -50, 50, 100, 100)
+
+    t = rg.SimpleTurtle()
+    try_methods_and_functions(t, 2, 50, 30, 10, 25, 15, 8, 150, 60 )
 
     ###########################################################################
     # When the TODOs ask you to test YOUR code, put YOUR tests below this:
@@ -180,13 +187,21 @@ def try_methods():
       -- forward    50 units
       -- backward  100 units
     """
+    b = rg.SimpleTurtle()
+    b.speed = 10
+    b.pen = rg.Pen('brown',5)
+
+    b.forward(150)
+    b.left(90)
+    b.forward(50)
+    b.backward(100)
     ###########################################################################
-    # TODO: 3. Implement and this function, per its doc-string above.
+    # DONE: 3. Implement and this function, per its doc-string above.
     #     (To test it, put a statement in   main   that calls this function.)
     ###########################################################################
 
 
-def try_functions():
+def try_functions(x1, y1, x2, y2, x3, y3, x4, y4, x5, y5, x6, y6):
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
     """
     Causes several SimpleTurtles to do the following:
@@ -194,8 +209,37 @@ def try_functions():
      -- One jumps to (100, 200), then moves (while drawing) to (0, 0)
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
+    h = rg.SimpleTurtle()
+    h.pen = rg.Pen('black', 10)
+    h.speed = 5
+
+    h.pen_up()
+    h.go_to(rg.Point(x1, y1))
+
+    h.pen_down()
+    h.go_to(rg.Point(x2, y2))
+
+    g = rg.SimpleTurtle()
+    g.pen = rg.Pen('red', 15)
+    g.speed = 7
+
+    g.pen_up()
+    g.go_to(rg.Point(x3, y3))
+
+    g.pen_down()
+    g.go_to(rg.Point(x4, y4))
+
+    d = rg.SimpleTurtle()
+    d.pen = rg.Pen('green', 25)
+    d.speed = 2
+
+    d.pen_up()
+    d.go_to(rg.Point(x5, y5))
+
+    d.pen_down()
+    d.go_to(rg.Point(x6, y6))
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DONE: 4. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #    NOTE: This function requires
@@ -206,7 +250,7 @@ def try_functions():
     ###########################################################################
 
 
-def try_methods_and_functions():
+def try_methods_and_functions(tortuise, k, s, z, p, r, w, o, u, q):
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
@@ -239,7 +283,35 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
-    ###########################################################################
+    tortuise.pen = rg.Pen('blue', 5)
+    tortuise.speed = 1
+
+    tortuise.backward(150)
+
+    for _ in range(k):
+        tortuise.draw_square(s)
+        tortuise.left(z)
+
+    new_speed = tortuise.speed + 4
+    tortuise.speed = new_speed
+    tortuise.pen = rg.Pen('red',5)
+    for _ in range(p):
+        tortuise.draw_square(r)
+        tortuise.left(w)
+
+    n_speed = 100
+    tortuise.speed = n_speed
+    tortuise.pen = rg.Pen('red', 35)
+    for _ in range(o):
+        tortuise.draw_square(u)
+        tortuise.left(q)
+
+    tortuise.speed = 10
+    tortuise.pen = rg.Pen('black',3)
+    tortuise.backward(200)
+    tortuise.draw_circle(30)
+    tortuise.draw_square(50)
+   ###########################################################################
     # TODO: 5. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
