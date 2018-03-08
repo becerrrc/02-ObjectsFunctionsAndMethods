@@ -33,7 +33,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #          ask PyCharm will help you figure out the answer to this question.
 #          Hint: After you type the   (   in the line of code,
 #          if you wait a moment PyCharm will add the   )   and has a popup.
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            300 is max height
 #
 #     d. Write a line of code that constructs a RoseWindow object whose
 #        height is 100 with any width you choose.
@@ -49,17 +49,17 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #          -- Write the names of three METHODs that Circle objects have:
 #               Hint: Use the circle from the  example3  function below with
 #               the dot trick to let PyCharm help you.
-#                  Center point and Radius
+#                  attach_to, clone, init
 #
 #          -- Write the names of three INSTANCE VARIABLEs
 #             that Circle objects have:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#                radius, center, self
 #
 #     f. What does a RoseWindow RENDER method do?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            Window to display the pixels
 #
 #     g. When is a RoseWindow close_on_mouse_click method call necessary?  Why?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#             when given multiple points to see a transition
 #
 #   ASK QUESTIONS ** NOW ** if you do not understand how the
 #     RoseGraphics graphics system works.
@@ -83,9 +83,6 @@ def main():
     example1()
     example2()
     example3()
-    window = rg.RoseWindow()
-    rg.
-
 
 def example1():
     """ Displays an empty window. """
